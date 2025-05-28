@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhaseX Empire</title>
+  <style>
+    :root {
+      --bg-light: #000000;
+      --text-light: #ffffff;
+      --bg-dark: #1e1e1e;
+      --text-dark: #eee;
+      --primary: #8B0000;
+      --primary-light: #FF6347;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background 0.3s ease, color 0.3s ease;
+      scroll-behavior: smooth;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      background-image: url('https://wallpapercave.com/wp/wp5128415.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: -1;
+    }
+
+    header {
+      padding: 1rem;
+      background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+      color: white;
+      text-align: center;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-light);
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 10px;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease both;
+    }
+
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .hub-card {
+      border-radius: 10px;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+      display: block;
+      background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .hub-card:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .hub-card strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>PhaseX Empire</h1>
+    <p>Welcome to the world of PhaseX — where knowledge, entertainment, and creativity unite.</p>
+  </header>
+
+  <nav>
+    <a href="#intro">Home</a>
+    <a href="#hubs">Hubs</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#support">Support</a>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>Welcome to PhaseX Empire</h2>
+      <p>Explore a universe of gaming, engineering, design, and personal insight. Each hub below leads you into a powerful domain of the Empire.</p>
+    </section>
+
+    <section id="hubs">
+      <h2>🧠 Knowledge Hubs</h2>
+      <div class="hub-grid">
+        <a class="hub-card" href="gaming.html">
+          🎮 <strong>Gaming Hub</strong>
+          <p>Top-tier tips, gameplays, highlight edits, and deep-dive strategy breakdowns. Links to featured games and highlight reels coming soon.</p>
+        </a>
+        <a class="hub-card" href="engineering.html">
+          ⚙️ <strong>Engineering Hub</strong>
+          <p>Projects in control systems, Simulink, microcontrollers, and robotics explained visually. Interactive labs in development.</p>
+        </a>
+        <a class="hub-card" href="creative.html">
+          🎨 <strong>Creative Hub</strong>
+          <p>Digital art, design concepts, music projects, and aesthetic content by PhaseX. Showcases and artist collaborations to come.</p>
+        </a>
+        <a class="hub-card" href="learning.html">
+          📘 <strong>Learning Hub</strong>
+          <p>Guides on HTML, CSS, MATLAB, electronics, AI, and creative problem solving. Tutorials and walkthroughs added weekly.</p>
+        </a>
+        <a class="hub-card" href="logs.html">
+          📓 <strong>PhaseX Logs</strong>
+          <p>Progress logs, roadmaps, weekly updates, milestones, and deep personal insights. See how the Empire grows phase by phase.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m PhaseX — an engineer, gamer, designer, and explorer of ideas. This empire is my digital canvas, crafted for those who want to build, learn, and expand their minds.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="https://formsubmit.co/prokayn123@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_next" value="https://phasex300.github.io/phasex1/#contact">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.5rem;"></textarea><br><br>
+        <button type="submit" style="background-color: #FF6347; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+      </form>
+    </section>
+
+    <section id="support">
+      <h2>Support the Empire</h2>
+      <p>If you'd like to help grow the Empire, you can donate USDT:</p>
+      <ul>
+        <li><strong>Wallet Address:</strong> <em>0x012b0bf521840523e923329a82a997d6910b1294</em></li>
+        <li><strong>Networks:</strong> TRC20 / zkEVM</li>
+      </ul>
+      <p><strong>Scan to Donate:</strong></p>
+      <img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=0x012b0bf521840523e923329a82a997d6910b1294" alt="USDT Wallet QR" style="margin-top: 1rem; border: 1px solid #FF6347; border-radius: 8px;" />
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">This QR code is linked to the wallet address above.</p>
+    </section>
+  </main>
+
+  <footer style="text-align: center; padding: 2rem; color: #ccc; font-size: 0.9rem;">
+    <p>© 2025 PhaseX Empire. All rights reserved.</p>
+    <p>Built with vision, code, and creativity.</p>
+  </footer>
+</body>
+</html>
