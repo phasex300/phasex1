@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhaseX Empire</title>
+  <style>
+    :root {
+      --bg-light: #000000;
+      --text-light: #ffffff;
+      --bg-dark: #1e1e1e;
+      --text-dark: #eee;
+      --primary: #8B0000;
+      --primary-light: #FF6347;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background 0.3s ease, color 0.3s ease;
+      scroll-behavior: smooth;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      background-image: url('https://wallpapercave.com/wp/wp5128415.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: -1;
+    }
+
+    header {
+      padding: 1rem;
+      background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+      color: white;
+      text-align: center;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-light);
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 10px;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease both;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary);
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: #aa1c1c;
+    }
+
+    .light {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    .dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .hub-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s;
+      display: block;
+    }
+    .hub-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="light">
+  <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
+
+  <header id="top">
+    <h1>PhaseX Empire</h1>
+    <p>Welcome to the world of PhaseX — where knowledge, entertainment, and creativity unite.</p>
+  </header>
+
+  <nav>
+    <a href="#intro">Home</a>
+    <a href="#hubs">Hubs</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#support">Support Me</a>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>Welcome to PhaseX Empire</h2>
+      <p>Explore an ever-growing universe of ideas — from gaming and engineering to design, code, and philosophy. This is your hub for inspiration, creation, and growth.</p>
+    </section>
+
+    <section id="hubs">
+      <h2>🧠 Knowledge Hubs</h2>
+      <div class="hub-grid">
+        <a class="hub-card" href="gaming.html">
+          🎮 <strong>Gaming Hub</strong>
+          <p>Guides, highlights, pro tips & walkthroughs.</p>
+        </a>
+        <a class="hub-card" href="engineering.html">
+          ⚙️ <strong>Engineering Hub</strong>
+          <p>Control systems, MATLAB, electronics & robotics.</p>
+        </a>
+        <a class="hub-card" href="creative.html">
+          🎨 <strong>Creative Hub</strong>
+          <p>Design, music, digital aesthetics & expression.</p>
+        </a>
+        <a class="hub-card" href="learning.html">
+          📘 <strong>Learning Hub</strong>
+          <p>Tech tutorials, notes, software guidance.</p>
+        </a>
+        <a class="hub-card" href="logs.html">
+          📓 <strong>PhaseX Logs</strong>
+          <p>Progress, reflections, personal goals & insights.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="youtube">
+      <h2>📺 Featured YouTube Video</h2>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm <strong>PhaseX</strong>, an explorer, creator, engineer, gamer, and thinker. The PhaseX Empire is my digital kingdom where I share the many facets of my journey — from science and art to fun and reflection.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📧 Email: thedeepcave.channel@gmail.com</p>
+      <p>📱 Discord/WhatsApp: DM for details</p>
+      <p>Got feedback or suggestions? I’d love to hear from you!</p>
+    </section>
+
+    <section id="support">
+      <h2>💸 Support Me</h2>
+      <p>If you'd like to help me grow the channel and produce more awesome content:</p>
+      <ul>
+        <li><strong>Crypto:</strong> USDT (Polygon zkEVM or TRC20)</li>
+        <li><strong>Wallet Address:</strong> <em>[Your Wallet Here]</em></li>
+        <li><strong>Tip Note:</strong> Include your name if you'd like a shout-out!</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
