@@ -1,24 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚙️ Engineering Hub</title>
   <style>
     body {
-      background-color: #000;
+      background: #000;
       color: #fff;
       font-family: Arial, sans-serif;
       padding: 2rem;
-      margin: 0;
+      background-image: url('https://wallpapercave.com/wp/wp5128415.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: -1;
+    }
+    main {
+      background: rgba(0,0,0,0.85);
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
     }
     h1 {
       color: #FF6347;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    a {
+      color: #FF6347;
+      text-decoration: none;
+      display: block;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1>⚙️ Hub</h1>
-  <p>⚙️ Dive deep into control systems, Simulink, robotics, and more engineering marvels.</p>
-  <p><a href="index.html" style="color:#FF6347;text-decoration:none;">← Back to Empire</a></p>
+  <main>
+    <h1>⚙️ Engineering Hub</h1>
+    <p>From simulations in Simulink to microcontrollers and robot builds — this is your engineering command center. Stay tuned for interactive labs and project breakdowns.</p>
+    <a href="index.html">← Back to Empire</a>
+  </main>
 </body>
 </html>
