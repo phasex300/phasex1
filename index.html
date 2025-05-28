@@ -79,51 +79,33 @@
       animation: fadeInUp 1s ease both;
     }
 
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem 1rem;
-      background: var(--primary);
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-      background: #aa1c1c;
-    }
-
-    .light {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
-    .dark {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
     .hub-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
     }
+
     .hub-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 10px;
       padding: 1rem;
       color: white;
       text-decoration: none;
-      transition: background 0.3s ease, transform 0.2s;
       display: block;
+      background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, background 0.3s ease;
     }
+
     .hub-card:hover {
+      transform: scale(1.05);
       background: rgba(255,255,255,0.1);
-      transform: translateY(-4px);
+    }
+
+    .hub-card strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
     }
 
     @keyframes fadeInDown {
@@ -142,9 +124,7 @@
     }
   </style>
 </head>
-<body class="light">
-  <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
-
+<body>
   <header id="top">
     <h1>PhaseX Empire</h1>
     <p>Welcome to the world of PhaseX — where knowledge, entertainment, and creativity unite.</p>
@@ -153,16 +133,15 @@
   <nav>
     <a href="#intro">Home</a>
     <a href="#hubs">Hubs</a>
-    <a href="#youtube">YouTube</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-    <a href="#support">Support Me</a>
+    <a href="#support">Support</a>
   </nav>
 
   <main>
     <section id="intro">
       <h2>Welcome to PhaseX Empire</h2>
-      <p>Explore an ever-growing universe of ideas — from gaming and engineering to design, code, and philosophy. This is your hub for inspiration, creation, and growth.</p>
+      <p>Explore a universe of gaming, engineering, design, and personal insight. Each hub below leads you into a powerful domain of the Empire.</p>
     </section>
 
     <section id="hubs">
@@ -170,63 +149,64 @@
       <div class="hub-grid">
         <a class="hub-card" href="gaming.html">
           🎮 <strong>Gaming Hub</strong>
-          <p>Guides, highlights, pro tips & walkthroughs.</p>
+          <p>Top-tier tips, gameplays, highlight edits, and deep-dive strategy breakdowns. Links to featured games and highlight reels coming soon.</p>
         </a>
         <a class="hub-card" href="engineering.html">
           ⚙️ <strong>Engineering Hub</strong>
-          <p>Control systems, MATLAB, electronics & robotics.</p>
+          <p>Projects in control systems, Simulink, microcontrollers, and robotics explained visually. Interactive labs in development.</p>
         </a>
         <a class="hub-card" href="creative.html">
           🎨 <strong>Creative Hub</strong>
-          <p>Design, music, digital aesthetics & expression.</p>
+          <p>Digital art, design concepts, music projects, and aesthetic content by PhaseX. Showcases and artist collaborations to come.</p>
         </a>
         <a class="hub-card" href="learning.html">
           📘 <strong>Learning Hub</strong>
-          <p>Tech tutorials, notes, software guidance.</p>
+          <p>Guides on HTML, CSS, MATLAB, electronics, AI, and creative problem solving. Tutorials and walkthroughs added weekly.</p>
         </a>
         <a class="hub-card" href="logs.html">
           📓 <strong>PhaseX Logs</strong>
-          <p>Progress, reflections, personal goals & insights.</p>
+          <p>Progress logs, roadmaps, weekly updates, milestones, and deep personal insights. See how the Empire grows phase by phase.</p>
         </a>
-      </div>
-    </section>
-
-    <section id="youtube">
-      <h2>📺 Featured YouTube Video</h2>
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
       </div>
     </section>
 
     <section id="about">
       <h2>About Me</h2>
-      <p>I'm <strong>PhaseX</strong>, an explorer, creator, engineer, gamer, and thinker. The PhaseX Empire is my digital kingdom where I share the many facets of my journey — from science and art to fun and reflection.</p>
+      <p>I’m PhaseX — an engineer, gamer, designer, and explorer of ideas. This empire is my digital canvas, crafted for those who want to build, learn, and expand their minds.</p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>📧 Email: thedeepcave.channel@gmail.com</p>
-      <p>📱 Discord/WhatsApp: DM for details</p>
-      <p>Got feedback or suggestions? I’d love to hear from you!</p>
+      <form action="https://formsubmit.co/prokayn123@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_next" value="https://phasex300.github.io/phasex1/#contact">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.5rem;"></textarea><br><br>
+        <button type="submit" style="background-color: #FF6347; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+      </form>
     </section>
 
     <section id="support">
-      <h2>💸 Support Me</h2>
-      <p>If you'd like to help me grow the channel and produce more awesome content:</p>
+      <h2>Support the Empire</h2>
+      <p>If you'd like to help grow the Empire, you can donate USDT:</p>
       <ul>
-        <li><strong>Crypto:</strong> USDT (Polygon zkEVM or TRC20)</li>
-        <li><strong>Wallet Address:</strong> <em>[Your Wallet Here]</em></li>
-        <li><strong>Tip Note:</strong> Include your name if you'd like a shout-out!</li>
+        <li><strong>Wallet Address:</strong> <em>0x012b0bf521840523e923329a82a997d6910b1294</em></li>
+        <li><strong>Networks:</strong> TRC20 / zkEVM</li>
       </ul>
+      <p><strong>Scan to Donate:</strong></p>
+      <img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=0x012b0bf521840523e923329a82a997d6910b1294" alt="USDT Wallet QR" style="margin-top: 1rem; border: 1px solid #FF6347; border-radius: 8px;" />
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">This QR code is linked to the wallet address above.</p>
     </section>
   </main>
 
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      body.classList.toggle('dark');
-      body.classList.toggle('light');
-    }
-  </script>
+  <footer style="text-align: center; padding: 2rem; color: #ccc; font-size: 0.9rem;">
+    <p>© 2025 PhaseX Empire. All rights reserved.</p>
+    <p>Built with vision, code, and creativity.</p>
+  </footer>
 </body>
 </html>
